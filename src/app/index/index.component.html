@@ -1,3 +1,27 @@
-<p>
-  index works!
-</p>
+<mat-toolbar color="primary" fxLayout="row">
+  <span>MyApp</span>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">
+      <mat-icon>menu</mat-icon>
+      <span>home</span>
+    </button>
+    <button mat-menu-item routerLink="/jquery">
+      <mat-icon>voicemail</mat-icon>
+      <span>jquery</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>angular</span>
+    </button>
+  </mat-menu>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
